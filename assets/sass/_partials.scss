@@ -1,0 +1,12 @@
+@mixin container {
+    max-width: 40em; // 720px / 18px
+    margin: 0 auto;
+}
+
+%rule-bg-left {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAALElEQVQIW2NkwALWr11bz4guDhIMDA5uRJGACYIUwyWQBeES6IJgCWyCIAkAMqEWjztA0cYAAAAASUVORK5CYII=) repeat;
+}
+
+%rule-bg-right {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAKElEQVQIW2Ncv3ZtfWBwcCMDGmAE8bFJgiWwScIl0CVRJJAlMSRgkgDqORaPPmtaswAAAABJRU5ErkJggg==) repeat;
+}
