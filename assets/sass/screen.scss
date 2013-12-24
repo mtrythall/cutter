@@ -41,7 +41,7 @@ body {
 
 hr {
     @extend %rule-bg-right;
-    height: 4px;
+    height: 10px;
     border: none;
 }
 
@@ -59,6 +59,10 @@ a {
 
     &:focus {
         outline: 1px dotted $link-color;
+    }
+
+    &:visited {
+        color: lighten($link-color, 10%);
     }
 }
 
@@ -101,26 +105,41 @@ h1, h2, h3, h4, h5, h6 {
 .site-header {
     margin-top: 4rem;
     margin-bottom: 4rem;
-    padding-bottom: 3rem;
-    border-bottom: 6px solid $darkest-gray;
+    text-align: center;
+
+    //border-bottom: 6px solid $darkest-gray;
 }
 
 .site-title {
-    @extend .mega;
-    display: block;
+    @extend .beta;
+    @include inline-block;
+    //display: block;
 
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 
     font-family: 'Oswald';
     text-align: center;
     text-decoration: none;
-    text-shadow: 4px 3px 0px white, 9px 8px 0px rgba(0,0,0,0.25);
+    //text-shadow: 4px 3px 0px white, 9px 8px 0px rgba(0,0,0,0.25);
     text-transform: uppercase;
-    color: #222;
+
+    background: $link-x-color;
+    
+    &, &:visited { 
+        color: white;
+    }
+
+    &:hover {
+        background: none;
+        color: $link-x-color;
+    }
 }
 
 .social-nav {
     text-align: center;
+    margin-bottom: 3rem;
 
     a {
         @include inline-block;
@@ -132,15 +151,17 @@ h1, h2, h3, h4, h5, h6 {
 
         background: $darkest-gray;
         border-radius: 100%;
+        border: 3px solid transparent;
 
-        font-size: 24px;
+        font-size: 26px;
         line-height: $social-icon-size;
         text-align: center;
         color: white;
     }
 
     a:hover {
-        background: $link-x-color;
+        background: none;
+        color: $link-x-color;
     }
 }
 
