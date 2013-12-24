@@ -16,6 +16,8 @@
     {{! Styles and Scripts }}
     
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Open+Sans:400italic,600italic,700italic,400,600,700' rel='stylesheet' type='text/css'>
+
+    <link href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
     
     <!--
     <link href='http://fonts.googleapis.com/css?family=Gentium+Basic:400,700,400italic,700italic|Open+Sans:400italic,600italic,700italic,700,600,400' rel='stylesheet' type='text/css'>
@@ -31,8 +33,22 @@
 <div class="container">
     <header class="site-header">
         <a class="site-title" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a>
-
-        <hr />
+        
+        <nav class="social-nav">
+            <a href="https://twitter.com/mtrythall">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="https://github.com/mtrythall">
+                <i class="fa fa-github-alt"></i>
+            </a>
+            <a href="http://linkedin.com/in/mtrythall">
+                <i class="fa fa-linkedin"></i>
+            </a>
+            <a href="mailto:m@mtrythall.com?subject='Sup">
+                <i class="fa fa-envelope"></i>
+            </a>
+        </nav>
+        
     </header>
 
     <main class="main" role="main">

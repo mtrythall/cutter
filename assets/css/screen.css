@@ -645,7 +645,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #222222;
+  color: #323232;
 }
 
 /* line 707, ../sass/_typeplate.scss */
@@ -815,7 +815,7 @@ p + .drop-cap {
  */
 /* line 10, ../sass/_partials.scss */
 hr {
-  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAKElEQVQIW2Ncv3ZtfWBwcCMDGmAE8bFJgiWwScIl0CVRJJAlMSRgkgDqORaPPmtaswAAAABJRU5ErkJggg==) repeat;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAKElEQVQIW2M8dOjQfzs7O0YGNAAWwCYJV4kuiWIEsiSG2TBJDAmYnQD6MhdMvjsJWwAAAABJRU5ErkJggg==) repeat;
 }
 
 /* line 38, ../sass/screen.scss */
@@ -829,62 +829,108 @@ hr {
   border: none;
 }
 
-/* line 53, ../sass/screen.scss */
+/* line 48, ../sass/screen.scss */
+a {
+  color: salmon;
+}
+/* line 51, ../sass/screen.scss */
+a:hover {
+  color: #f73d28;
+}
+/* line 55, ../sass/screen.scss */
+a:active {
+  color: #f73d28;
+  text-decoration: none;
+}
+/* line 60, ../sass/screen.scss */
+a:focus {
+  outline: 1px dotted salmon;
+}
+
+/* line 70, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald';
   font-weight: normal;
 }
 
-/* line 62, ../sass/screen.scss */
+/* line 79, ../sass/screen.scss */
 .container {
   margin: 0 1rem;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 .site-header,
 .main {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 71, ../sass/screen.scss */
+/* line 88, ../sass/screen.scss */
 .site-footer {
   background: #666;
   color: white;
 }
-/* line 75, ../sass/screen.scss */
+/* line 92, ../sass/screen.scss */
 .site-footer .inner {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 84, ../sass/screen.scss */
+/* line 101, ../sass/screen.scss */
 .site-header {
   margin-top: 4rem;
   margin-bottom: 4rem;
   padding-bottom: 3rem;
-  border-bottom: 6px solid #222222;
+  border-bottom: 6px solid #323232;
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 108, ../sass/screen.scss */
 .site-title {
   display: block;
+  margin-bottom: 2rem;
   font-family: 'Oswald';
   text-align: center;
   text-decoration: none;
   text-shadow: 4px 3px 0px white, 9px 8px 0px rgba(0, 0, 0, 0.25);
   text-transform: uppercase;
-  color: #222222;
+  color: #222;
 }
 
-/* line 109, ../sass/screen.scss */
+/* line 122, ../sass/screen.scss */
+.social-nav {
+  text-align: center;
+}
+/* line 125, ../sass/screen.scss */
+.social-nav a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  height: 30px;
+  width: 30px;
+  padding: 10px;
+  background: #323232;
+  border-radius: 100%;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: white;
+}
+/* line 142, ../sass/screen.scss */
+.social-nav a:hover {
+  background: #f73d28;
+}
+
+/* line 151, ../sass/screen.scss */
 .post-date {
   font-weight: bold;
   text-transform: uppercase;
   color: #aeadad;
 }
 
-/* line 116, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .post-content img {
   display: block;
   max-width: 100%;

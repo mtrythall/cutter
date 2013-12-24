@@ -45,6 +45,23 @@ hr {
     border: none;
 }
 
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-x-color;
+    }
+
+    &:active {
+        color: $link-x-color;
+        text-decoration: none;
+    }
+
+    &:focus {
+        outline: 1px dotted $link-color;
+    }
+}
+
 
 //
 // Typography
@@ -92,14 +109,39 @@ h1, h2, h3, h4, h5, h6 {
     @extend .mega;
     display: block;
 
-    //background: $darkest-gray;
+    margin-bottom: 2rem;
 
     font-family: 'Oswald';
     text-align: center;
     text-decoration: none;
-    text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.25);
+    text-shadow: 4px 3px 0px white, 9px 8px 0px rgba(0,0,0,0.25);
     text-transform: uppercase;
-    color: $darkest-gray;
+    color: #222;
+}
+
+.social-nav {
+    text-align: center;
+
+    a {
+        @include inline-block;
+        
+        height: $social-icon-size;
+        width: $social-icon-size;
+
+        padding: $social-icon-size/3;
+
+        background: $darkest-gray;
+        border-radius: 100%;
+
+        font-size: 24px;
+        line-height: $social-icon-size;
+        text-align: center;
+        color: white;
+    }
+
+    a:hover {
+        background: $link-x-color;
+    }
 }
 
 //
