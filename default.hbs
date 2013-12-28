@@ -34,7 +34,7 @@
     <header class="site-header">
         <a class="site-title" title="{{@blog.title}}" href="{{@blog.url}}">{{@blog.title}}</a>
         
-        <nav class="social-nav">
+        <nav class="nav social-nav">
             <a href="https://twitter.com/mtrythall">
                 <i class="fa fa-twitter"></i>
             </a>
@@ -60,11 +60,18 @@
 
 <footer class="site-footer">
     <div class="inner">
-        <a class="subscribe" href="{{@blog.url}}/rss/">
-            Subscribe
-        </a>
+        
+        <nav class="nav footer-nav">
+            <a class="subscribe" href="{{@blog.url}}/rss/">
+                <i class="fa fa-rss-square"> </i>
+            </a>
+        </nav>
+
         <section class="copyright">All content copyright <a href="/">{{@blog.title}}</a> &copy; 2013-2014 &bull; All rights reserved.</section>
-        <section class="poweredby">Proudly published with <a class="icon-ghost" href="http://ghost.org">Ghost</a></section>
+        <section class="poweredby">
+            Published with <a href="http://ghost.org">Ghost</a>. 
+            <a href="https://github.com/mtrythall/cutter">Cutter theme</a> available on Github.
+        </section>
     </div>
 </footer>
 
