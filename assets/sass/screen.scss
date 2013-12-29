@@ -41,7 +41,7 @@ body {
 
 hr {
     @extend %rule-bg-right;
-    height: 10px;
+    height: 6px;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
     border: none;
@@ -125,8 +125,22 @@ h1, h2 {
 //
 
 .site-header {
+    position: relative;
     margin-bottom: 4em;
+    padding-bottom: 3em;
     text-align: center;
+}
+
+.site-header:after {
+    @extend %rule-bg-right;
+    display: block;
+    height: 6px;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+
+    content: " "; 
 }
 
 .site-title {
@@ -134,7 +148,7 @@ h1, h2 {
     @include inline-block;
 
     margin-bottom: 3rem;
-    padding: 2em 1em .5em;
+    padding: 4rem 1em .5em;
 
     font-family: 'Oswald';
     text-align: center;
@@ -155,7 +169,6 @@ h1, h2 {
 
 .social-nav {
     text-align: center;
-    margin-bottom: 3em;
 
     a {
         @include inline-block;
@@ -202,7 +215,7 @@ h1, h2 {
 .poweredby,
 .copyright,
 .sep {
-    @include inline-block;
+    display: inline-block;
 }
 
 .site-footer { 
@@ -246,7 +259,7 @@ h1, h2 {
 }
 
 .post-index {
-
+    margin-top: 2rem;
 }
 
 .post-stub a {
@@ -263,6 +276,14 @@ h1, h2 {
     color: $dark-gray;
 }
 
+//
+// Post Footer
+//
+
+.share a {
+    @extend .gamma;
+    text-decoration: none;
+}
 
 //
 // Post Navigation
