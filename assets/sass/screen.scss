@@ -42,6 +42,8 @@ body {
 hr {
     @extend %rule-bg-right;
     height: 10px;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
     border: none;
 }
 
@@ -50,10 +52,11 @@ a {
 
     &:hover {
         color: $link-x-color;
+        text-decoration: none;
     }
 
     &:active {
-        color: $link-x-color;
+        color: darken($link-x-color, 10%);
         text-decoration: none;
     }
 
@@ -64,6 +67,18 @@ a {
     &:visited {
         color: lighten($link-color, 10%);
     }
+}
+
+blockquote {
+    margin-left: 0;
+    padding-left: 1.5em;
+
+    border-left: 6px solid $light-gray;
+    color: darken($gray, 20%);
+}
+
+code {
+    padding-left: 0;
 }
 
 
@@ -84,13 +99,14 @@ h1, h2 {
 // Layout
 //
 
-.container {
-    margin: 0 1em;
+.site-header,
+.main,
+.site-footer .inner {
+    @include container;
 }
 
-.site-header,
-.main {
-    @include container;
+.container {
+    margin: 0 1em;
 }
 
 .main {
@@ -98,19 +114,10 @@ h1, h2 {
 }
 
 .site-footer {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 3em;
+    padding-bottom: 3em;
     background: $darkest-gray;
-    color: white;
-
-    .inner {
-        @include container;
-    }
-}
-
-.copyright,
-.poweredby {
-    font-size: .9em; // XXX - use Typeplate
+    color: $gray;
 }
 
 //
@@ -118,26 +125,20 @@ h1, h2 {
 //
 
 .site-header {
-    margin-top: 4em;
     margin-bottom: 4em;
     text-align: center;
-
-    //border-bottom: 6px solid $darkest-gray;
 }
 
 .site-title {
     @extend .beta;
     @include inline-block;
-    //display: block;
 
     margin-bottom: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding: 2em 1em .5em;
 
     font-family: 'Oswald';
     text-align: center;
     text-decoration: none;
-    //text-shadow: 4px 3px 0px white, 9px 8px 0px rgba(0,0,0,0.25);
     text-transform: uppercase;
 
     background: $link-x-color;
@@ -185,17 +186,34 @@ h1, h2 {
 //
 
 .site-footer {
+    font-size: .9em;
     text-align: center;
+
+    a {
+        font-weight: bold;
+        color: $gray;
+    }
+
+    a:hover {
+        color: white;
+    }
 }
 
-.footer-nav {
-    margin-bottom: 1.5em;
+.poweredby,
+.copyright,
+.sep {
+    @include inline-block;
 }
 
-.subscribe {
-    @extend .alpha;
-    // Remove extra spacing
-    line-height: 1;
+.site-footer { 
+    .inner {
+        padding: 0 1em;
+    }
+
+    .sep {
+        margin-right: .25em;
+        margin-left: .25em;
+    }
 }
 
 //
@@ -203,7 +221,6 @@ h1, h2 {
 //
 
 .post-date {
-    font-weight: bold;
     text-transform: uppercase;
     color: $gray;
 }
@@ -215,18 +232,12 @@ h1, h2 {
     margin: 0 auto;
 }
 
-.post-content hr {
-    margin-top: 1.5em;
-    margin-bottom: 1.5em;
-}
-
 //
 // Post Lists
 //
-.post-tags {
-    .headline {
-        font-weight: bold;
-    }
+
+.post-tags .headline {
+    font-weight: bold;
 }
 
 .post-list {
@@ -236,4 +247,39 @@ h1, h2 {
 
 .post-index {
 
+}
+
+.post-stub a {
+    display: block;
+    text-decoration: none;
+}
+
+.post-stub-title {
+    margin-bottom: .5rem;
+}
+
+.post-stub-date {
+    font-size: .9em;
+    color: $dark-gray;
+}
+
+
+//
+// Post Navigation
+//
+
+.post-navigation {
+    text-align: center;
+}
+
+.page-number {
+    color: $gray;
+}
+
+//
+// Plugin Styles
+//
+.post-content pre[class*="language-"] {
+    margin: 1.5em 0;
+    padding: auto 0;
 }

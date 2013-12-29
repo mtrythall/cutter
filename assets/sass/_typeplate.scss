@@ -653,6 +653,9 @@ xmp {
 // $Styles $Codeblocks
 // -------------------------------------//
 
+/*
+// Removed due to Prism.js
+
 pre code {
 	@extend %normal-wrap;
 	@include white-space(pre-wrap);
@@ -666,6 +669,7 @@ code {
 	@include white-space(pre);
 	font-family: monospace;
 }
+*/
 
 
 // $Styles $Smallcaps

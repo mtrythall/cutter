@@ -471,11 +471,6 @@ body {
   word-wrap: break-word;
 }
 
-/* line 396, ../sass/_typeplate.scss */
-pre code {
-  word-wrap: normal;
-}
-
 /**
  * Dropcap Sass @include
  * Use the following Sass @include with any selector you feel necessary.
@@ -534,7 +529,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 578, ../sass/_typeplate.scss */
-.alpha, h1, .subscribe {
+.alpha, h1 {
   font-size: 60px;
   font-size: 3.33333rem;
   margin-bottom: 0.495rem;
@@ -601,23 +596,6 @@ xmp {
   hyphens: none;
 }
 
-/* line 656, ../sass/_typeplate.scss */
-pre code {
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
-}
-
-/* line 661, ../sass/_typeplate.scss */
-pre {
-  white-space: pre;
-}
-
-/* line 665, ../sass/_typeplate.scss */
-code {
-  white-space: pre;
-  font-family: monospace;
-}
-
 /**
  * Abbreviations Markup
  *
@@ -626,19 +604,19 @@ code {
  * Extend this object into your markup.
  *
  */
-/* line 681, ../sass/_typeplate.scss */
+/* line 685, ../sass/_typeplate.scss */
 abbr {
   font-variant: small-caps;
   font-weight: 600;
   text-transform: lowercase;
   color: gray;
 }
-/* line 683, ../sass/_typeplate.scss */
+/* line 687, ../sass/_typeplate.scss */
 abbr[title]:hover {
   cursor: help;
 }
 
-/* line 697, ../sass/_typeplate.scss */
+/* line 701, ../sass/_typeplate.scss */
 h1,
 h2,
 h3,
@@ -648,7 +626,7 @@ h6 {
   color: #323232;
 }
 
-/* line 707, ../sass/_typeplate.scss */
+/* line 711, ../sass/_typeplate.scss */
 p + .drop-cap {
   text-indent: 0;
   margin-top: 0;
@@ -760,7 +738,7 @@ p + .drop-cap {
  * Extend this object into your custom stylesheet.
  *
  */
-/* line 791, ../sass/_typeplate.scss */
+/* line 795, ../sass/_typeplate.scss */
 .pull-quote {
   position: relative;
   padding: 1em;
@@ -826,86 +804,91 @@ body {
 /* line 42, ../sass/screen.scss */
 hr {
   height: 10px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
   border: none;
 }
 
-/* line 48, ../sass/screen.scss */
+/* line 50, ../sass/screen.scss */
 a {
-  color: salmon;
+  color: #d33734;
 }
-/* line 51, ../sass/screen.scss */
+/* line 53, ../sass/screen.scss */
 a:hover {
-  color: #f73d28;
-}
-/* line 55, ../sass/screen.scss */
-a:active {
   color: #f73d28;
   text-decoration: none;
 }
-/* line 60, ../sass/screen.scss */
-a:focus {
-  outline: 1px dotted salmon;
+/* line 58, ../sass/screen.scss */
+a:active {
+  color: #e41f08;
+  text-decoration: none;
 }
-/* line 64, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
+a:focus {
+  outline: 1px dotted #d33734;
+}
+/* line 67, ../sass/screen.scss */
 a:visited {
-  color: #fcaca3;
+  color: #dc605e;
 }
 
-/* line 74, ../sass/screen.scss */
+/* line 72, ../sass/screen.scss */
+blockquote {
+  margin-left: 0;
+  padding-left: 1.5em;
+  border-left: 6px solid #d9d9d9;
+  color: #7b7a7a;
+}
+
+/* line 80, ../sass/screen.scss */
+code {
+  padding-left: 0;
+}
+
+/* line 89, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald';
   font-weight: normal;
 }
 
-/* line 79, ../sass/screen.scss */
+/* line 94, ../sass/screen.scss */
 h1, h2 {
   text-shadow: 0 1px 0 white;
 }
 
-/* line 87, ../sass/screen.scss */
-.container {
-  margin: 0 1em;
-}
-
-/* line 92, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 .site-header,
-.main {
-  max-width: 40em;
-  margin: 0 auto;
-}
-
-/* line 96, ../sass/screen.scss */
-.main {
-  margin-bottom: 2em;
-}
-
-/* line 100, ../sass/screen.scss */
-.site-footer {
-  padding-top: 2em;
-  padding-bottom: 2em;
-  background: #323232;
-  color: white;
-}
-/* line 106, ../sass/screen.scss */
+.main,
 .site-footer .inner {
   max-width: 40em;
   margin: 0 auto;
 }
 
-/* line 112, ../sass/screen.scss */
-.copyright,
-.poweredby {
-  font-size: .9em;
+/* line 108, ../sass/screen.scss */
+.container {
+  margin: 0 1em;
 }
 
-/* line 120, ../sass/screen.scss */
+/* line 112, ../sass/screen.scss */
+.main {
+  margin-bottom: 2em;
+}
+
+/* line 116, ../sass/screen.scss */
+.site-footer {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  background: #323232;
+  color: #aeadad;
+}
+
+/* line 127, ../sass/screen.scss */
 .site-header {
-  margin-top: 4em;
   margin-bottom: 4em;
   text-align: center;
 }
 
-/* line 128, ../sass/screen.scss */
+/* line 132, ../sass/screen.scss */
 .site-title {
   display: -moz-inline-stack;
   display: inline-block;
@@ -914,30 +897,29 @@ h1, h2 {
   zoom: 1;
   *display: inline;
   margin-bottom: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 2em 1em .5em;
   font-family: 'Oswald';
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
   background: #f73d28;
 }
-/* line 145, ../sass/screen.scss */
+/* line 146, ../sass/screen.scss */
 .site-title, .site-title:visited {
   color: white;
 }
-/* line 149, ../sass/screen.scss */
+/* line 150, ../sass/screen.scss */
 .site-title:hover {
   background: none;
   color: #f73d28;
 }
 
-/* line 155, ../sass/screen.scss */
+/* line 156, ../sass/screen.scss */
 .social-nav {
   text-align: center;
   margin-bottom: 3em;
 }
-/* line 159, ../sass/screen.scss */
+/* line 160, ../sass/screen.scss */
 .social-nav a {
   display: -moz-inline-stack;
   display: inline-block;
@@ -956,54 +938,102 @@ h1, h2 {
   text-align: center;
   color: white;
 }
-/* line 177, ../sass/screen.scss */
+/* line 178, ../sass/screen.scss */
 .social-nav a:hover {
   background: none;
   color: #f73d28;
 }
 
-/* line 187, ../sass/screen.scss */
+/* line 188, ../sass/screen.scss */
 .site-footer {
+  font-size: .9em;
   text-align: center;
 }
-
-/* line 191, ../sass/screen.scss */
-.footer-nav {
-  margin-bottom: 1.5em;
-}
-
-/* line 195, ../sass/screen.scss */
-.subscribe {
-  line-height: 1;
-}
-
-/* line 205, ../sass/screen.scss */
-.post-date {
+/* line 192, ../sass/screen.scss */
+.site-footer a {
   font-weight: bold;
+  color: #aeadad;
+}
+/* line 197, ../sass/screen.scss */
+.site-footer a:hover {
+  color: white;
+}
+
+/* line 204, ../sass/screen.scss */
+.poweredby,
+.copyright,
+.sep {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 209, ../sass/screen.scss */
+.site-footer .inner {
+  padding: 0 1em;
+}
+/* line 213, ../sass/screen.scss */
+.site-footer .sep {
+  margin-right: .25em;
+  margin-left: .25em;
+}
+
+/* line 223, ../sass/screen.scss */
+.post-date {
   text-transform: uppercase;
   color: #aeadad;
 }
 
-/* line 212, ../sass/screen.scss */
+/* line 229, ../sass/screen.scss */
 .post-content img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* line 218, ../sass/screen.scss */
-.post-content hr {
-  margin-top: 1.5em;
-  margin-bottom: 1.5em;
-}
-
-/* line 227, ../sass/screen.scss */
+/* line 239, ../sass/screen.scss */
 .post-tags .headline {
   font-weight: bold;
 }
 
-/* line 232, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .post-list {
   list-style: none;
   padding: 0;
+}
+
+/* line 252, ../sass/screen.scss */
+.post-stub a {
+  display: block;
+  text-decoration: none;
+}
+
+/* line 257, ../sass/screen.scss */
+.post-stub-title {
+  margin-bottom: .5rem;
+}
+
+/* line 261, ../sass/screen.scss */
+.post-stub-date {
+  font-size: .9em;
+  color: #444444;
+}
+
+/* line 271, ../sass/screen.scss */
+.post-navigation {
+  text-align: center;
+}
+
+/* line 275, ../sass/screen.scss */
+.page-number {
+  color: #aeadad;
+}
+
+/* line 282, ../sass/screen.scss */
+.post-content pre[class*="language-"] {
+  margin: 1.5em 0;
+  padding: auto 0;
 }

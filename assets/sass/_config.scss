@@ -1,10 +1,11 @@
 $darkest-gray: #323232;
 $dark-gray: #444;
 $gray: #AEADAD;
+$light-gray: #D9D9D9;
 
 $body-background: #fefefe;
 
-$link-color: salmon;
-$link-x-color: darken($link-color, 15%);
+$link-color: #D33734;
+$link-x-color: darken(#FA8072, 15%); // darken salmon 15%
 
 $social-icon-size: 30px;
