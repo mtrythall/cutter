@@ -50,22 +50,17 @@ hr {
 a {
     color: $link-color;
 
-    &:hover {
-        color: $link-x-color;
-        text-decoration: none;
+    &:visited {
+        color: lighten($link-color, 15%);
     }
 
+    &:hover,
     &:active {
-        color: darken($link-x-color, 10%);
-        text-decoration: none;
+        color: $link-x-color;
     }
 
     &:focus {
         outline: 1px dotted $link-color;
-    }
-
-    &:visited {
-        color: lighten($link-color, 10%);
     }
 }
 
@@ -80,7 +75,6 @@ blockquote {
 code {
     padding-left: 0;
 }
-
 
 //
 // Typography
@@ -126,7 +120,7 @@ h1, h2 {
 
 .site-header {
     position: relative;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     padding-bottom: 3em;
     text-align: center;
 }
@@ -140,7 +134,7 @@ h1, h2 {
     position: absolute;
     bottom: 0;
 
-    content: " "; 
+    content: ""; 
 }
 
 .site-title {
@@ -155,7 +149,7 @@ h1, h2 {
     text-decoration: none;
     text-transform: uppercase;
 
-    background: $link-x-color;
+    background: linear-gradient(lighten($base-color, 10%), $base-color);
     
     &, &:visited { 
         color: white;
@@ -179,7 +173,7 @@ h1, h2 {
         padding: $social-icon-size/3;
 
         background: $darkest-gray;
-        border-radius: 100%;
+        border-radius: 50%;
         border: 3px solid transparent;
 
         font-size: 26px;
@@ -233,9 +227,35 @@ h1, h2 {
 // Post Styles
 //
 
+.return a:before {
+    display: inline-block;
+    margin-right: .25em;
+    color: $link-color;
+    content: "\2190";
+}
+
+.post {
+    margin-bottom: 3rem;
+}
+
 .post-date {
-    text-transform: uppercase;
     color: $gray;
+    margin-bottom: 1rem;
+}
+
+.post-title {
+    margin-bottom: 1rem;
+
+    a {
+        // $heading-color, but we don't want
+        // dependencies
+        color: $darkest-gray;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: $link-x-color;
+    }
 }
 
 // Keep images within the bounds of the layout
@@ -245,44 +265,22 @@ h1, h2 {
     margin: 0 auto;
 }
 
-//
-// Post Lists
-//
-
 .post-tags .headline {
     font-weight: bold;
 }
 
+//
+// Post Lists
+//
+
 .post-list {
-    list-style: none;
-    padding: 0;
+    margin-bottom: 2em;
 }
 
-.post-index {
-    margin-top: 2rem;
-}
-
-.post-stub a {
-    display: block;
-    text-decoration: none;
-}
-
-.post-stub-title {
-    margin-bottom: .5rem;
-}
-
-.post-stub-date {
-    font-size: .9em;
-    color: $dark-gray;
-}
-
-//
-// Post Footer
-//
-
-.share a {
-    @extend .gamma;
-    text-decoration: none;
+.post-list .post {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid $light-gray;
 }
 
 //
@@ -300,6 +298,7 @@ h1, h2 {
 //
 // Plugin Styles
 //
+
 .post-content pre[class*="language-"] {
     margin: 1.5em 0;
     padding: auto 0;

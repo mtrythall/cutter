@@ -1,3 +1,5 @@
+$base-color: firebrick;
+
 $darkest-gray: #323232;
 $dark-gray: #444;
 $gray: #AEADAD;
@@ -5,7 +7,7 @@ $light-gray: #D9D9D9;
 
 $body-background: #fefefe;
 
-$link-color: #D33734;
-$link-x-color: darken(#FA8072, 15%); // darken salmon 15%
+$link-color: $base-color;
+$link-x-color: darken($link-color, 10%);
 
 $social-icon-size: 30px;

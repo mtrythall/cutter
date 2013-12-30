@@ -1,41 +1,20 @@
 {{!< default}}
 
-<div class="latest-post">
-    {{#foreach posts}}
-        {{#if @first}}
-            <article class="{{post_class}}">
-                <header class="post-header">
-                    <h1 class="post-title">{{title}}</h1>
+<div class="post-list">
+{{#foreach posts}}
+    <article class="{{post_class}}">
+        <header class="post-header">
+            <p class="post-date"><time datetime="{{published_at}}">{{date format="DD MMM YYYY"}}</time></p>
+            <h2 class="post-title"><a href="{{url}}">{{title}}</a></h2>
+        </header>
 
-                    <p class="post-date"><time datetime="{{published_at}}">Published {{date format="MMMM Do YYYY"}}</time></p>
-                </header>
-
-                <div class="post-content">
-                    {{{content}}}
-
-                    {{#if tags}}
-                        <p class="post-tags"><span class="headline">Tagged:</span> {{tags}}</p>
-                    {{/if}}
-                </div>
-            </article>
-        {{/if}}
-    {{/foreach}}
+        <div class="post-content">
+            {{{excerpt}}}
+        </div>
+    </article>
+{{/foreach}}
 </div>
 
-<div class="post-index">
-    <ol class="post-list">
-        {{#foreach posts}}
-            <li class="post-stub">
-                <a href="{{url}}">
-                    <h4 class="post-stub-title">{{title}}</h4>
-
-                    <time class="post-stub-date" datetime="{{published_at}}">Published {{date format="MMMM Do YYYY"}}</time>
-                </a>
-            </li>
-        {{/foreach}}
-    </ol>
-
-    <div class="post-navigation">
-        {{pagination}}
-    </div>
+<div class="post-navigation">
+    {{pagination}}
 </div>
