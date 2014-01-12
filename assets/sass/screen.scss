@@ -119,7 +119,8 @@ h1, h2 {
 .site-header {
     position: relative;
     margin-bottom: 3em;
-    padding-bottom: 1em;
+    padding-bottom: 2em;
+    background: $base-color;
     text-align: center;
 }
 
@@ -131,29 +132,28 @@ h1, h2 {
     width: 100%;
 
     position: absolute;
-    bottom: 0;
+    bottom: -1em;
 
     content: " "; 
 }
 
 .site-footer:before {
     top: -1em;
+    bottom: auto;
 }
 
 .site-title {
-    @extend .gamma;
+    @extend .beta;
+    @include css-hyphens(none);
 
     display: block;
     margin-bottom: 0;
-    padding: 4rem 1em 1rem;
+    padding: 2.5rem 1em 1rem;
 
     font-family: 'Oswald';
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
-
-    //background: linear-gradient(lighten($base-color, 10%), $base-color);
-    background: lighten($base-color, 10%);
     
     &, &:visited { 
         color: white;
@@ -161,16 +161,22 @@ h1, h2 {
 }
 
 .social-nav {
-    background: $darkest-gray;
     text-align: center;
 
     a {
         @include inline-block;
         
-        padding: $social-icon-size/2 $social-icon-size/3;
+        height: $social-icon-size;
+        width: $social-icon-size;
+
+        padding: $social-icon-size/3;
+
+        border-radius: 50%;
         border: 3px solid transparent;
 
-        font-size: 28px;
+        background: $link-x-color;
+
+        font-size: 26px;
         line-height: $social-icon-size;
         text-align: center;
         color: white;
@@ -178,7 +184,6 @@ h1, h2 {
 
     a:hover {
         background: none;
-        color: $social-nav-hover-color;
     }
 }
 
@@ -303,10 +308,12 @@ h1, h2 {
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
 
 @media screen and (min-width: 26em) {
+    .site-header {
+        padding-top: 4rem;
+    }
     .site-title {
         // We cannot extend inside a media query
         @include type-scale($alpha, $font-base, $type-scale-unit-value, $measure);
         margin-bottom: 0;
-        padding-top: 10rem;
     }
 }
