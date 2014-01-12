@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**********************************************/
 /* Quick to the point, to the point no faking */
 /**********************************************/
@@ -8,7 +9,7 @@
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 22, ../sass/_normalize.scss */
+/* line 11, ../sass/_normalize.scss */
 article,
 aside,
 details,
@@ -27,7 +28,7 @@ summary {
 /**
  * Correct `inline-block` display not defined in IE 8/9.
  */
-/* line 32, ../sass/_normalize.scss */
+/* line 30, ../sass/_normalize.scss */
 audio,
 canvas,
 video {
@@ -48,7 +49,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 52, ../sass/_normalize.scss */
+/* line 51, ../sass/_normalize.scss */
 [hidden],
 template {
   display: none;
@@ -102,7 +103,7 @@ a:focus {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 105, ../sass/_normalize.scss */
+/* line 104, ../sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -132,7 +133,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 136, ../sass/_normalize.scss */
+/* line 135, ../sass/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -168,7 +169,7 @@ mark {
 /**
  * Correct font family set oddly in Safari 5 and Chrome.
  */
-/* line 174, ../sass/_normalize.scss */
+/* line 171, ../sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -204,7 +205,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 208, ../sass/_normalize.scss */
+/* line 207, ../sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -283,7 +284,7 @@ legend {
  * 2. Correct font size not being inherited in all browsers.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 288, ../sass/_normalize.scss */
+/* line 285, ../sass/_normalize.scss */
 button,
 input,
 select,
@@ -300,7 +301,7 @@ textarea {
  * Address Firefox 4+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-/* line 300, ../sass/_normalize.scss */
+/* line 299, ../sass/_normalize.scss */
 button,
 input {
   line-height: normal;
@@ -312,7 +313,7 @@ input {
  * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
  * Correct `select` style inheritance in Firefox 4+ and Opera.
  */
-/* line 312, ../sass/_normalize.scss */
+/* line 311, ../sass/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -325,7 +326,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 327, ../sass/_normalize.scss */
+/* line 324, ../sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -339,7 +340,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 337, ../sass/_normalize.scss */
+/* line 336, ../sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -349,7 +350,7 @@ html input[disabled] {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 347, ../sass/_normalize.scss */
+/* line 346, ../sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -377,7 +378,7 @@ input[type="search"] {
  * Remove inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-/* line 371, ../sass/_normalize.scss */
+/* line 370, ../sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -386,7 +387,7 @@ input[type="search"]::-webkit-search-decoration {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 380, ../sass/_normalize.scss */
+/* line 379, ../sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -459,13 +460,11 @@ table {
   src: local("Georgia"), local("Garamond"), local("Palatino"), local("Book Antiqua");
   unicode-range: U+0026;
 }
-
 @font-face {
   font-family: "Ampersand";
   src: local("Georgia");
   unicode-range: U+270C;
 }
-
 /* line 392, ../sass/_typeplate.scss */
 body {
   word-wrap: break-word;
@@ -536,14 +535,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 578, ../sass/_typeplate.scss */
-.beta, h2, .site-title {
+.beta, h2 {
   font-size: 48px;
   font-size: 2.66667rem;
   margin-bottom: 0.61875rem;
 }
 
 /* line 578, ../sass/_typeplate.scss */
-.gamma, h3 {
+.gamma, h3, .site-title {
   font-size: 36px;
   font-size: 2rem;
   margin-bottom: 0.825rem;
@@ -575,7 +574,7 @@ p {
   margin: auto auto 1.5em;
 }
 
-/* line 648, ../sass/_typeplate.scss */
+/* line 636, ../sass/_typeplate.scss */
 abbr,
 acronym,
 blockquote,
@@ -616,7 +615,7 @@ abbr[title]:hover {
   cursor: help;
 }
 
-/* line 701, ../sass/_typeplate.scss */
+/* line 696, ../sass/_typeplate.scss */
 h1,
 h2,
 h3,
@@ -656,7 +655,7 @@ p + .drop-cap {
  * Extend this object into your markup.
  *
  */
-/* line 462, ../sass/_typeplate.scss */
+/* line 461, ../sass/_typeplate.scss */
 .lining dt,
 .lining dd {
   display: inline;
@@ -743,7 +742,7 @@ p + .drop-cap {
   position: relative;
   padding: 1em;
 }
-/* line 364, ../sass/_typeplate.scss */
+/* line 363, ../sass/_typeplate.scss */
 .pull-quote:before, .pull-quote:after {
   height: 1em;
   opacity: 0.5;
@@ -792,16 +791,17 @@ p + .drop-cap {
  *
  */
 /* line 10, ../sass/_partials.scss */
-hr, .site-header:after {
+hr, .site-header:after,
+.site-footer:before {
   background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAYAAADgzO9IAAAAKElEQVQIW2M8dOjQfzs7O0YGNAAWwCYJV4kuiWIEsiSG2TBJDAmYnQD6MhdMvjsJWwAAAABJRU5ErkJggg==) repeat;
 }
 
-/* line 38, ../sass/screen.scss */
+/* line 39, ../sass/screen.scss */
 body {
   background: #fefefe;
 }
 
-/* line 42, ../sass/screen.scss */
+/* line 43, ../sass/screen.scss */
 hr {
   height: 6px;
   margin-top: 1.5em;
@@ -809,24 +809,24 @@ hr {
   border: none;
 }
 
-/* line 50, ../sass/screen.scss */
+/* line 51, ../sass/screen.scss */
 a {
   color: firebrick;
 }
-/* line 53, ../sass/screen.scss */
+/* line 54, ../sass/screen.scss */
 a:visited {
-  color: #db4545;
+  color: #e05a5a;
 }
 /* line 58, ../sass/screen.scss */
 a:hover, a:active {
   color: #871a1a;
 }
-/* line 62, ../sass/screen.scss */
+/* line 63, ../sass/screen.scss */
 a:focus {
   outline: 1px dotted firebrick;
 }
 
-/* line 67, ../sass/screen.scss */
+/* line 68, ../sass/screen.scss */
 blockquote {
   margin-left: 0;
   padding-left: 1.5em;
@@ -834,24 +834,23 @@ blockquote {
   color: #7b7a7a;
 }
 
-/* line 75, ../sass/screen.scss */
+/* line 76, ../sass/screen.scss */
 code {
   padding-left: 0;
 }
 
-/* line 83, ../sass/screen.scss */
+/* line 84, ../sass/screen.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Oswald';
   font-weight: normal;
 }
 
-/* line 88, ../sass/screen.scss */
+/* line 89, ../sass/screen.scss */
 h1, h2 {
   text-shadow: 0 1px 0 white;
 }
 
-/* line 98, ../sass/screen.scss */
-.site-header,
+/* line 97, ../sass/screen.scss */
 .main,
 .site-footer .inner {
   max-width: 40em;
@@ -859,129 +858,118 @@ h1, h2 {
 }
 
 /* line 102, ../sass/screen.scss */
-.container {
-  margin: 0 1em;
-}
-
-/* line 106, ../sass/screen.scss */
 .main {
   margin-bottom: 2em;
+  padding: 0 1em;
 }
 
-/* line 110, ../sass/screen.scss */
+/* line 107, ../sass/screen.scss */
 .site-footer {
+  position: relative;
   padding-top: 3em;
   padding-bottom: 3em;
   background: #323232;
   color: #aeadad;
 }
 
-/* line 121, ../sass/screen.scss */
+/* line 119, ../sass/screen.scss */
 .site-header {
   position: relative;
   margin-bottom: 3em;
-  padding-bottom: 3em;
+  padding-bottom: 1em;
   text-align: center;
 }
 
-/* line 128, ../sass/screen.scss */
-.site-header:after {
+/* line 126, ../sass/screen.scss */
+.site-header:after,
+.site-footer:before {
   display: block;
-  height: 6px;
+  height: 1em;
   width: 100%;
   position: absolute;
   bottom: 0;
-  content: "";
+  content: " ";
 }
 
-/* line 140, ../sass/screen.scss */
+/* line 139, ../sass/screen.scss */
+.site-footer:before {
+  top: -1em;
+}
+
+/* line 143, ../sass/screen.scss */
 .site-title {
-  display: -moz-inline-stack;
-  display: inline-block;
-  vertical-align: middle;
-  *vertical-align: auto;
-  zoom: 1;
-  *display: inline;
-  margin-bottom: 3rem;
-  padding: 4rem 1em .5em;
+  display: block;
+  margin-bottom: 0;
+  padding: 4rem 1em 1rem;
   font-family: 'Oswald';
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  background: linear-gradient(#d73030, #b22222);
+  background: #d73030;
 }
-/* line 154, ../sass/screen.scss */
+/* line 158, ../sass/screen.scss */
 .site-title, .site-title:visited {
   color: white;
 }
-/* line 158, ../sass/screen.scss */
-.site-title:hover {
-  background: none;
-  color: #871a1a;
-}
 
-/* line 164, ../sass/screen.scss */
+/* line 163, ../sass/screen.scss */
 .social-nav {
+  background: #323232;
   text-align: center;
 }
 /* line 167, ../sass/screen.scss */
 .social-nav a {
-  display: -moz-inline-stack;
   display: inline-block;
   vertical-align: middle;
   *vertical-align: auto;
-  zoom: 1;
+  *zoom: 1;
   *display: inline;
-  height: 30px;
-  width: 30px;
-  padding: 10px;
-  background: #323232;
-  border-radius: 50%;
+  padding: 15px 10px;
   border: 3px solid transparent;
-  font-size: 26px;
+  font-size: 28px;
   line-height: 30px;
   text-align: center;
   color: white;
 }
-/* line 185, ../sass/screen.scss */
+/* line 179, ../sass/screen.scss */
 .social-nav a:hover {
   background: none;
-  color: #871a1a;
+  color: #db4545;
 }
 
-/* line 195, ../sass/screen.scss */
+/* line 189, ../sass/screen.scss */
 .site-footer {
   font-size: .9em;
   text-align: center;
 }
-/* line 199, ../sass/screen.scss */
+/* line 193, ../sass/screen.scss */
 .site-footer a {
   font-weight: bold;
   color: #aeadad;
 }
-/* line 204, ../sass/screen.scss */
+/* line 198, ../sass/screen.scss */
 .site-footer a:hover {
   color: white;
 }
 
-/* line 211, ../sass/screen.scss */
+/* line 203, ../sass/screen.scss */
 .poweredby,
 .copyright,
 .sep {
   display: inline-block;
 }
 
-/* line 216, ../sass/screen.scss */
+/* line 210, ../sass/screen.scss */
 .site-footer .inner {
   padding: 0 1em;
 }
-/* line 220, ../sass/screen.scss */
+/* line 214, ../sass/screen.scss */
 .site-footer .sep {
   margin-right: .25em;
   margin-left: .25em;
 }
 
-/* line 230, ../sass/screen.scss */
+/* line 224, ../sass/screen.scss */
 .return a:before {
   display: inline-block;
   margin-right: .25em;
@@ -989,67 +977,78 @@ h1, h2 {
   content: "\2190";
 }
 
-/* line 237, ../sass/screen.scss */
+/* line 231, ../sass/screen.scss */
 .post {
   margin-bottom: 3rem;
 }
 
-/* line 241, ../sass/screen.scss */
+/* line 235, ../sass/screen.scss */
 .post-date {
   color: #aeadad;
   margin-bottom: 1rem;
 }
 
-/* line 246, ../sass/screen.scss */
+/* line 240, ../sass/screen.scss */
 .post-title {
   margin-bottom: 1rem;
 }
-/* line 249, ../sass/screen.scss */
+/* line 243, ../sass/screen.scss */
 .post-title a {
   color: #323232;
   text-decoration: none;
 }
-/* line 256, ../sass/screen.scss */
+/* line 250, ../sass/screen.scss */
 .post-title a:hover {
   color: #871a1a;
 }
 
-/* line 262, ../sass/screen.scss */
+/* line 256, ../sass/screen.scss */
 .post-content img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
 
-/* line 268, ../sass/screen.scss */
+/* line 262, ../sass/screen.scss */
 .post-tags .headline {
   font-weight: bold;
 }
 
-/* line 276, ../sass/screen.scss */
+/* line 270, ../sass/screen.scss */
 .post-list {
   margin-bottom: 2em;
 }
 
-/* line 280, ../sass/screen.scss */
+/* line 274, ../sass/screen.scss */
 .post-list .post {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid #d9d9d9;
 }
 
-/* line 290, ../sass/screen.scss */
+/* line 284, ../sass/screen.scss */
 .post-navigation {
   text-align: center;
 }
 
-/* line 294, ../sass/screen.scss */
+/* line 288, ../sass/screen.scss */
 .page-number {
   color: #aeadad;
 }
 
-/* line 302, ../sass/screen.scss */
+/* line 296, ../sass/screen.scss */
 .post-content pre[class*="language-"] {
   margin: 1.5em 0;
   padding: auto 0;
+}
+
+@media screen and (min-width: 26em) {
+  /* line 306, ../sass/screen.scss */
+  .site-title {
+    font-size: 60px;
+    font-size: 3.33333rem;
+    margin-bottom: 0.495rem;
+    margin-bottom: 0;
+    padding-top: 10rem;
+  }
 }

@@ -25,6 +25,7 @@
 //
 // Utilities & Helpers
 //
+
 @import "partials";
 
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -51,7 +52,7 @@ a {
     color: $link-color;
 
     &:visited {
-        color: lighten($link-color, 15%);
+        color: lighten($link-color, 20%);
     }
 
     &:hover,
@@ -93,21 +94,18 @@ h1, h2 {
 // Layout
 //
 
-.site-header,
 .main,
 .site-footer .inner {
     @include container;
 }
 
-.container {
-    margin: 0 1em;
-}
-
 .main {
     margin-bottom: 2em;
+    padding: 0 1em;
 }
 
 .site-footer {
+    position: relative;
     padding-top: 3em;
     padding-bottom: 3em;
     background: $darkest-gray;
@@ -121,62 +119,58 @@ h1, h2 {
 .site-header {
     position: relative;
     margin-bottom: 3em;
-    padding-bottom: 3em;
+    padding-bottom: 1em;
     text-align: center;
 }
 
-.site-header:after {
+.site-header:after,
+.site-footer:before {
     @extend %rule-bg-right;
     display: block;
-    height: 6px;
+    height: 1em;
     width: 100%;
 
     position: absolute;
     bottom: 0;
 
-    content: ""; 
+    content: " "; 
+}
+
+.site-footer:before {
+    top: -1em;
 }
 
 .site-title {
-    @extend .beta;
-    @include inline-block;
+    @extend .gamma;
 
-    margin-bottom: 3rem;
-    padding: 4rem 1em .5em;
+    display: block;
+    margin-bottom: 0;
+    padding: 4rem 1em 1rem;
 
     font-family: 'Oswald';
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
 
-    background: linear-gradient(lighten($base-color, 10%), $base-color);
+    //background: linear-gradient(lighten($base-color, 10%), $base-color);
+    background: lighten($base-color, 10%);
     
     &, &:visited { 
         color: white;
     }
-
-    &:hover {
-        background: none;
-        color: $link-x-color;
-    }
 }
 
 .social-nav {
+    background: $darkest-gray;
     text-align: center;
 
     a {
         @include inline-block;
         
-        height: $social-icon-size;
-        width: $social-icon-size;
-
-        padding: $social-icon-size/3;
-
-        background: $darkest-gray;
-        border-radius: 50%;
+        padding: $social-icon-size/2 $social-icon-size/3;
         border: 3px solid transparent;
 
-        font-size: 26px;
+        font-size: 28px;
         line-height: $social-icon-size;
         text-align: center;
         color: white;
@@ -184,7 +178,7 @@ h1, h2 {
 
     a:hover {
         background: none;
-        color: $link-x-color;
+        color: $social-nav-hover-color;
     }
 }
 
@@ -302,4 +296,17 @@ h1, h2 {
 .post-content pre[class*="language-"] {
     margin: 1.5em 0;
     padding: auto 0;
+}
+
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+// Responsive Stuff
+//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
+
+@media screen and (min-width: 26em) {
+    .site-title {
+        // We cannot extend inside a media query
+        @include type-scale($alpha, $font-base, $type-scale-unit-value, $measure);
+        margin-bottom: 0;
+        padding-top: 10rem;
+    }
 }
