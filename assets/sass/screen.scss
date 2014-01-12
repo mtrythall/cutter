@@ -179,11 +179,12 @@ h1, h2 {
         font-size: 26px;
         line-height: $social-icon-size;
         text-align: center;
-        color: white;
+        color: lighten($base-color, 50%);
     }
 
     a:hover {
         background: none;
+        color: white;
     }
 }
 
